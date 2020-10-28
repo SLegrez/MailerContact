@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def index
     @contact = Home.new(params[:home])
   end
